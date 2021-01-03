@@ -1,0 +1,9 @@
+D:\Belgelerim\Programlar\C#\iptv-editor\iptv-editor\bin\Release\IPTV Editor.exe
+D:\Belgelerim\Programlar\C#\iptv-editor\iptv-editor\bin\Release\IPTV Editor.pdb
+D:\Belgelerim\Programlar\C#\iptv-editor\iptv-editor\obj\Release\iptv-editor.csprojAssemblyReference.cache
+D:\Belgelerim\Programlar\C#\iptv-editor\iptv-editor\obj\Release\iptv_editor.FrmIpTvEditor.resources
+D:\Belgelerim\Programlar\C#\iptv-editor\iptv-editor\obj\Release\iptv_editor.Properties.Resources.resources
+D:\Belgelerim\Programlar\C#\iptv-editor\iptv-editor\obj\Release\iptv-editor.csproj.GenerateResource.cache
+D:\Belgelerim\Programlar\C#\iptv-editor\iptv-editor\obj\Release\iptv-editor.csproj.CoreCompileInputs.cache
+D:\Belgelerim\Programlar\C#\iptv-editor\iptv-editor\obj\Release\IPTV Editor.exe
+D:\Belgelerim\Programlar\C#\iptv-editor\iptv-editor\obj\Release\IPTV Editor.pdb
