@@ -7,3 +7,12 @@ D:\Belgelerim\Programlar\C#\iptv-editor\iptv-editor\obj\Debug\iptv-editor.csproj
 D:\Belgelerim\Programlar\C#\iptv-editor\iptv-editor\obj\Debug\iptv-editor.csproj.CoreCompileInputs.cache
 D:\Belgelerim\Programlar\C#\iptv-editor\iptv-editor\obj\Debug\IPTV Editor.exe
 D:\Belgelerim\Programlar\C#\iptv-editor\iptv-editor\obj\Debug\IPTV Editor.pdb
+D:\Belgelerim\Programlar\C#\+ Github\iptv-editor\iptv-editor\bin\Debug\IPTV Editor.exe
+D:\Belgelerim\Programlar\C#\+ Github\iptv-editor\iptv-editor\bin\Debug\IPTV Editor.pdb
+D:\Belgelerim\Programlar\C#\+ Github\iptv-editor\iptv-editor\obj\Debug\iptv-editor.csprojAssemblyReference.cache
+D:\Belgelerim\Programlar\C#\+ Github\iptv-editor\iptv-editor\obj\Debug\iptv_editor.FrmIpTvEditor.resources
+D:\Belgelerim\Programlar\C#\+ Github\iptv-editor\iptv-editor\obj\Debug\iptv_editor.Properties.Resources.resources
+D:\Belgelerim\Programlar\C#\+ Github\iptv-editor\iptv-editor\obj\Debug\iptv-editor.csproj.GenerateResource.cache
+D:\Belgelerim\Programlar\C#\+ Github\iptv-editor\iptv-editor\obj\Debug\iptv-editor.csproj.CoreCompileInputs.cache
+D:\Belgelerim\Programlar\C#\+ Github\iptv-editor\iptv-editor\obj\Debug\IPTV Editor.exe
+D:\Belgelerim\Programlar\C#\+ Github\iptv-editor\iptv-editor\obj\Debug\IPTV Editor.pdb

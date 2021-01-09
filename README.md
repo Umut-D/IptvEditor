@@ -1,6 +1,6 @@
 # IPTV Editor
 
-<img src="https://img.shields.io/badge/Versiyon-1.00-blueviolet.svg?style=flat" alt="Versiyon" /> <img src="https://img.shields.io/badge/Durum-Çalışıyor-success.svg?style=flat" alt="Çalışıyor" /> <img src="https://img.shields.io/badge/Lisans-MIT-blue.svg?style=flat" alt="Lisans" />
+<img src="https://img.shields.io/badge/Versiyon-1.01-blueviolet.svg?style=flat" alt="Versiyon" /> <img src="https://img.shields.io/badge/Durum-Çalışıyor-success.svg?style=flat" alt="Çalışıyor" /> <img src="https://img.shields.io/badge/Lisans-MIT-blue.svg?style=flat" alt="Lisans" />
 
 IPTV kanalları açma, izleme ve silme özelliklerine sahip, performanslı bir IPTV editörü.
 

@@ -25,7 +25,7 @@ namespace iptv_editor
 
         public void Sil(Kanal kanal)
         {
-            Kanal silinenKanal = _aktar.Kanallar.SingleOrDefault(k => string.Equals(k.Ad, kanal.Ad, StringComparison.CurrentCultureIgnoreCase));
+            Kanal silinenKanal = _aktar.Kanallar.FirstOrDefault(k => string.Equals(k.Ad, kanal.Ad, StringComparison.CurrentCultureIgnoreCase));
 
             if (silinenKanal != null)
                 _aktar.Kanallar.Remove(silinenKanal);
