@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace iptv_editor
+namespace iptv_editor.Siniflar
 {
     public class Islem
     {

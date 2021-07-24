@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using Microsoft.Win32;
 
-namespace iptv_editor
+namespace iptv_editor.Siniflar
 {
     public class Izle
     {

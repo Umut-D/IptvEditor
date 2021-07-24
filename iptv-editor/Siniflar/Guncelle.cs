@@ -4,7 +4,7 @@ using System.Net;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace iptv_editor
+namespace iptv_editor.Siniflar
 {
     public class Guncelle
     {
@@ -25,6 +25,7 @@ namespace iptv_editor
             string guncellemeLinki = @"https://raw.githubusercontent.com/Umut-D/umutd.com/master/assets/program-versions/iptv-editor.xml";
 
             WebClient webIstemcisi = new WebClient();
+            ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
             XmlReader xmlOku = XmlReader.Create(webIstemcisi.OpenRead(guncellemeLinki) ?? throw new InvalidOperationException());
 
             while (xmlOku.Read())
@@ -39,7 +40,7 @@ namespace iptv_editor
         private void VersiyonKarsilastir(XmlReader xmlOku)
         {
             // TODO Her yeni versiyonda bu alan ve sunucudaki XML dosyası güncellecek
-            string versiyon = "1.01";
+            string versiyon = "1.02";
             string sunucudakiVersiyon = xmlOku.GetAttribute("version");
 
             if (sunucudakiVersiyon == versiyon)
