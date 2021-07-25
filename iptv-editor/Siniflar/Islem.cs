@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 
 namespace iptv_editor.Siniflar
 {
@@ -23,12 +21,14 @@ namespace iptv_editor.Siniflar
             return _aktar.Kanallar.FindAll(g => g.Grup.ToLower().Contains(kanal.Grup.ToLower()));
         }
 
+        private Kanal KanalBul(Kanal kanal)
+        {
+            return _aktar.Kanallar.Find(k => k.Ad.Equals(kanal.Ad));
+        }
+
         public void Sil(Kanal kanal)
         {
-            Kanal silinenKanal = _aktar.Kanallar.FirstOrDefault(k => string.Equals(k.Ad, kanal.Ad, StringComparison.CurrentCultureIgnoreCase));
-
-            if (silinenKanal != null)
-                _aktar.Kanallar.Remove(silinenKanal);
+            _aktar.Kanallar.Remove(KanalBul(kanal));
         }
     }
 }

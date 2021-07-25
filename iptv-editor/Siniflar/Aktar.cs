@@ -58,7 +58,7 @@ namespace iptv_editor.Siniflar
             return Regex.Match(satir, grupDesen).Groups[1].Value;
         }
 
-        private static string LinkRegex(string satir)
+        private string LinkRegex(string satir)
         {
             string linkDesen = @"\n^(.*)$";
             return Regex.Match(satir, linkDesen, RegexOptions.Multiline).Value;
