@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace iptv_editor
+namespace IptvEditorUI
 {
     static class Program
     {

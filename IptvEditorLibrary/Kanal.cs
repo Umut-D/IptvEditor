@@ -1,4 +1,4 @@
-﻿namespace iptv_editor.Siniflar
+﻿namespace IptvEditorLibrary
 {
     public class Kanal
     {

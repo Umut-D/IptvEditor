@@ -1,4 +1,4 @@
-﻿namespace iptv_editor
+﻿namespace IptvEditorUI
 {
     partial class FrmIpTvEditor
     {
@@ -79,6 +79,9 @@
             // 
             // tsmDosya
             // 
+            this.tsmDosya.AccessibleDescription = "Dosya menüsü";
+            this.tsmDosya.AccessibleName = "Dosya";
+            this.tsmDosya.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.tsmDosya.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiAc,
             this.tsmiKaydet,
@@ -89,30 +92,43 @@
             // 
             // tsmiAc
             // 
-            this.tsmiAc.Image = global::iptv_editor.Properties.Resources.Blank_Folder_icon;
+            this.tsmiAc.AccessibleDescription = "Var olan IPTV listesini açar";
+            this.tsmiAc.AccessibleName = "Aç";
+            this.tsmiAc.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuItem;
+            this.tsmiAc.Image = global::IptvEditorUI.Properties.Resources.Blank_Folder_icon;
             this.tsmiAc.Name = "tsmiAc";
-            this.tsmiAc.Size = new System.Drawing.Size(165, 30);
+            this.tsmiAc.Size = new System.Drawing.Size(252, 30);
             this.tsmiAc.Text = "Aç";
             this.tsmiAc.Click += new System.EventHandler(this.TsmiAc_Click);
             // 
             // tsmiKaydet
             // 
-            this.tsmiKaydet.Image = global::iptv_editor.Properties.Resources.Shortcuts_Folder_icon;
+            this.tsmiKaydet.AccessibleDescription = "Düzenlenen IPTV listesini kaydeder";
+            this.tsmiKaydet.AccessibleName = "Kaydet";
+            this.tsmiKaydet.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuItem;
+            this.tsmiKaydet.Image = global::IptvEditorUI.Properties.Resources.Shortcuts_Folder_icon;
             this.tsmiKaydet.Name = "tsmiKaydet";
-            this.tsmiKaydet.Size = new System.Drawing.Size(165, 30);
+            this.tsmiKaydet.Size = new System.Drawing.Size(252, 30);
             this.tsmiKaydet.Text = "Kaydet";
             this.tsmiKaydet.Click += new System.EventHandler(this.TsmiKaydet_Click);
             // 
             // tsmCikis
             // 
-            this.tsmCikis.Image = global::iptv_editor.Properties.Resources.Communicator_Mac_icon;
+            this.tsmCikis.AccessibleDescription = "Programdan çıkar";
+            this.tsmCikis.AccessibleName = "Çıkış";
+            this.tsmCikis.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuItem;
+            this.tsmCikis.Image = global::IptvEditorUI.Properties.Resources.Communicator_Mac_icon;
             this.tsmCikis.Name = "tsmCikis";
-            this.tsmCikis.Size = new System.Drawing.Size(165, 30);
+            this.tsmCikis.Size = new System.Drawing.Size(252, 30);
             this.tsmCikis.Text = "Çıkış";
             this.tsmCikis.Click += new System.EventHandler(this.TsmCikis_Click);
             // 
             // tstBul
             // 
+            this.tstBul.AccessibleDescription = "Listede kanal arama kutusu. Aramanızın başına @ eklerseniz Grup alanında arama ya" +
+    "pabilirsiniz";
+            this.tstBul.AccessibleName = "Ara";
+            this.tstBul.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.tstBul.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.tstBul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tstBul.Font = new System.Drawing.Font("Segoe UI", 10.20895F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -124,6 +140,9 @@
             // 
             // tsmiHakkinda
             // 
+            this.tsmiHakkinda.AccessibleDescription = "Hakkında menüsü";
+            this.tsmiHakkinda.AccessibleName = "Hakkında";
+            this.tsmiHakkinda.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.tsmiHakkinda.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmGuncelle,
             this.tsmBilgi});
@@ -133,7 +152,10 @@
             // 
             // tsmGuncelle
             // 
-            this.tsmGuncelle.Image = global::iptv_editor.Properties.Resources.Internet_Download_Manager_icon;
+            this.tsmGuncelle.AccessibleDescription = "Programa dair yeni versiyon olup olmadığı kontrolü yapar";
+            this.tsmGuncelle.AccessibleName = "Güncelle";
+            this.tsmGuncelle.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuItem;
+            this.tsmGuncelle.Image = global::IptvEditorUI.Properties.Resources.Internet_Download_Manager_icon;
             this.tsmGuncelle.Name = "tsmGuncelle";
             this.tsmGuncelle.Size = new System.Drawing.Size(252, 30);
             this.tsmGuncelle.Text = "Guncelle";
@@ -141,7 +163,10 @@
             // 
             // tsmBilgi
             // 
-            this.tsmBilgi.Image = global::iptv_editor.Properties.Resources.Autodesk_Building_Design_Suite_icon;
+            this.tsmBilgi.AccessibleDescription = "Programa dair bilgi ver";
+            this.tsmBilgi.AccessibleName = "Bilgi";
+            this.tsmBilgi.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuItem;
+            this.tsmBilgi.Image = global::IptvEditorUI.Properties.Resources.Autodesk_Building_Design_Suite_icon;
             this.tsmBilgi.Name = "tsmBilgi";
             this.tsmBilgi.Size = new System.Drawing.Size(252, 30);
             this.tsmBilgi.Text = "Bilgi";
@@ -166,6 +191,9 @@
             // 
             // tsslDurum
             // 
+            this.tsslDurum.AccessibleDescription = "Toplam kaç adet kanal yüklendiğinin bilgisi";
+            this.tsslDurum.AccessibleName = "Toplam Kanal";
+            this.tsslDurum.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.tsslDurum.Name = "tsslDurum";
             this.tsslDurum.Size = new System.Drawing.Size(0, 15);
             // 
@@ -222,7 +250,10 @@
             // 
             // cmsIzle
             // 
-            this.cmsIzle.Image = global::iptv_editor.Properties.Resources.VLC_Media_Player_icon;
+            this.cmsIzle.AccessibleDescription = "VLC Player ile izle";
+            this.cmsIzle.AccessibleName = "Izle";
+            this.cmsIzle.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuPopup;
+            this.cmsIzle.Image = global::IptvEditorUI.Properties.Resources.VLC_Media_Player_icon;
             this.cmsIzle.Name = "cmsIzle";
             this.cmsIzle.Size = new System.Drawing.Size(238, 30);
             this.cmsIzle.Text = "VLC Player ile Izle";
@@ -230,7 +261,10 @@
             // 
             // cmsSil
             // 
-            this.cmsSil.Image = global::iptv_editor.Properties.Resources.Security_Denied_icon;
+            this.cmsSil.AccessibleDescription = "Listeden kanal veya kanalları sil";
+            this.cmsSil.AccessibleName = "Sil";
+            this.cmsSil.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuPopup;
+            this.cmsSil.Image = global::IptvEditorUI.Properties.Resources.Security_Denied_icon;
             this.cmsSil.Name = "cmsSil";
             this.cmsSil.Size = new System.Drawing.Size(238, 30);
             this.cmsSil.Text = "Kanal(lar)ı Sil";
@@ -247,6 +281,9 @@
             // 
             // FrmIpTvEditor
             // 
+            this.AccessibleDescription = "Ana Ekran";
+            this.AccessibleName = "IPTV Editör";
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 648);

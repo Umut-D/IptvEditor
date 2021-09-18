@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using iptv_editor.Siniflar;
+using IptvEditorLibrary;
 
-namespace iptv_editor
+namespace IptvEditorUI
 {
     public partial class FrmIpTvEditor : Form
     {

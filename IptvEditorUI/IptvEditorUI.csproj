@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0DA21990-CE7C-4B6E-80B4-B8896D877A7A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>iptv_editor</RootNamespace>
-    <AssemblyName>IPTV Editor</AssemblyName>
+    <RootNamespace>IptvEditorUI</RootNamespace>
+    <AssemblyName>IPTV Editör</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -26,7 +26,7 @@
     <ProductName>IPTV Editor</ProductName>
     <PublisherName>Umut D.</PublisherName>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.3.%2a</ApplicationVersion>
+    <ApplicationVersion>1.0.5.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -65,18 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Siniflar\Aktar.cs" />
-    <Compile Include="Siniflar\Dosya.cs" />
     <Compile Include="FrmIpTvEditor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmIpTvEditor.Designer.cs">
       <DependentUpon>FrmIpTvEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Siniflar\Guncelle.cs" />
-    <Compile Include="Siniflar\Islem.cs" />
-    <Compile Include="Siniflar\Izle.cs" />
-    <Compile Include="Siniflar\Kanal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmIpTvEditor.resx">
@@ -133,6 +127,11 @@
   <ItemGroup>
     <Content Include="iptv.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\IptvEditorLibrary\IptvEditorLibrary.csproj">
+      <Project>{9966fe38-1e37-49d7-a2e2-86e532fc5ec4}</Project>
+      <Name>IptvEditorLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

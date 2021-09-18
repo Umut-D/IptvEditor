@@ -2,7 +2,7 @@
 using System.IO;
 using System.Text;
 
-namespace iptv_editor.Siniflar
+namespace IptvEditorLibrary
 {
     public class Dosya
     {

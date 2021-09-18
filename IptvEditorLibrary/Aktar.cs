@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace iptv_editor.Siniflar
+namespace IptvEditorLibrary
 {
     public class Aktar
     {

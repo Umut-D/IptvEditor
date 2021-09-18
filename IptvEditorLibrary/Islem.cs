@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace iptv_editor.Siniflar
+namespace IptvEditorLibrary
 {
     public class Islem
     {
