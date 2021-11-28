@@ -2,33 +2,33 @@
 
 namespace IptvEditorLibrary
 {
-    public class Islem
+    public class Ara
     {
         private readonly Aktar _aktar;
 
-        public Islem(Aktar aktar)
+        public Ara(Aktar aktar)
         {
             _aktar = aktar;
         }
 
-        public List<Kanal> AdaGoreBul(Kanal kanal)
+        public List<Kanal> AdaGore(Kanal kanal)
         {
             return _aktar.Kanallar.FindAll(a => a.Ad.ToLower().Contains(kanal.Ad.ToLower()));
         }
 
-        public List<Kanal> GrubaGoreBul(Kanal kanal)
+        public List<Kanal> GrubaGore(Kanal kanal)
         {
             return _aktar.Kanallar.FindAll(g => g.Grup.ToLower().Contains(kanal.Grup.ToLower()));
         }
 
-        private Kanal KanalBul(Kanal kanal)
+        private Kanal Kanal(Kanal kanal)
         {
             return _aktar.Kanallar.Find(k => k.Ad.Equals(kanal.Ad));
         }
 
-        public void Sil(Kanal kanal)
+        public void KanailSil(Kanal kanal)
         {
-            _aktar.Kanallar.Remove(KanalBul(kanal));
+            _aktar.Kanallar.Remove(Kanal(kanal));
         }
     }
 }

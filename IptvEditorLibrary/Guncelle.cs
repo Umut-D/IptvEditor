@@ -39,11 +39,9 @@ namespace IptvEditorLibrary
 
         private void VersiyonKarsilastir(XmlReader xmlOku)
         {
-            // TODO Her yeni versiyonda bu alan ve sunucudaki XML dosyası güncellecek
-            string versiyon = "1.05";
             string sunucudakiVersiyon = xmlOku.GetAttribute("version");
 
-            if (sunucudakiVersiyon == versiyon)
+            if (sunucudakiVersiyon == "1.06")
                 MessageBox.Show(@"Program günceldir. Yeni versiyon çıkana kadar şimdilik en iyisi bu.", @"Güncelle", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {

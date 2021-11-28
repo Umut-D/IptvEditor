@@ -9,7 +9,7 @@ namespace IptvEditorUI
     {
         private Dosya _dosya;
         private Aktar _aktar;
-        private Islem _islem;
+        private Ara _ara;
 
         public FrmIpTvEditor()
         {
@@ -76,19 +76,19 @@ namespace IptvEditorUI
 
         private List<Kanal> KanalBul()
         {
-            _islem = new Islem(_aktar);
+            _ara = new Ara(_aktar);
 
             List<Kanal> bul;
             if (tstBul.Text.StartsWith("@"))
             {
-                bul = _islem.GrubaGoreBul(new Kanal
+                bul = _ara.GrubaGore(new Kanal
                 {
                     Grup = tstBul.Text.Remove(0, 1)
                 });
             }
             else
             {
-                bul = _islem.AdaGoreBul(new Kanal
+                bul = _ara.AdaGore(new Kanal
                 {
                     Ad = tstBul.Text
                 });
@@ -125,7 +125,7 @@ namespace IptvEditorUI
 
         private void KanalSil()
         {
-            _islem = new Islem(_aktar);
+            _ara = new Ara(_aktar);
 
             for (int i = 0; i < listView.SelectedItems.Count; i++)
             {
@@ -134,7 +134,7 @@ namespace IptvEditorUI
 
                 int indeks = listView.SelectedItems[i].Index;
                 string seciliKanal = listView.Items[indeks].SubItems[1].Text.Trim();
-                _islem.Sil(new Kanal
+                _ara.KanailSil(new Kanal
                 {
                     Ad = seciliKanal
                 });
@@ -157,7 +157,16 @@ namespace IptvEditorUI
                 return;
 
             _dosya = new Dosya(sfdKaydet.FileName);
-            _dosya.Kaydet(_aktar);
+            _dosya.Kaydet(_aktar.Kanallar);
+        }
+
+        private void TsmiAramSonuclariniKaydet_Click(object sender, EventArgs e)
+        {
+            if (sfdKaydet.ShowDialog() != DialogResult.OK)
+                return;
+
+            _dosya = new Dosya(sfdKaydet.FileName);
+            _dosya.Kaydet(KanalBul());
         }
 
         private void TsmGuncelle_Click(object sender, EventArgs e)

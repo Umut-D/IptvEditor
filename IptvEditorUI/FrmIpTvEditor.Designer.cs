@@ -52,6 +52,7 @@
             this.cmsIzle = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsSil = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.tsmiAramaSonuclariniKaydet = new System.Windows.Forms.ToolStripMenuItem();
             this.msMenu.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.cmsSagTik.SuspendLayout();
@@ -85,6 +86,7 @@
             this.tsmDosya.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiAc,
             this.tsmiKaydet,
+            this.tsmiAramaSonuclariniKaydet,
             this.tsmCikis});
             this.tsmDosya.Name = "tsmDosya";
             this.tsmDosya.Size = new System.Drawing.Size(79, 33);
@@ -97,7 +99,7 @@
             this.tsmiAc.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuItem;
             this.tsmiAc.Image = global::IptvEditorUI.Properties.Resources.Blank_Folder_icon;
             this.tsmiAc.Name = "tsmiAc";
-            this.tsmiAc.Size = new System.Drawing.Size(252, 30);
+            this.tsmiAc.Size = new System.Drawing.Size(325, 30);
             this.tsmiAc.Text = "Aç";
             this.tsmiAc.Click += new System.EventHandler(this.TsmiAc_Click);
             // 
@@ -108,7 +110,7 @@
             this.tsmiKaydet.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuItem;
             this.tsmiKaydet.Image = global::IptvEditorUI.Properties.Resources.Shortcuts_Folder_icon;
             this.tsmiKaydet.Name = "tsmiKaydet";
-            this.tsmiKaydet.Size = new System.Drawing.Size(252, 30);
+            this.tsmiKaydet.Size = new System.Drawing.Size(325, 30);
             this.tsmiKaydet.Text = "Kaydet";
             this.tsmiKaydet.Click += new System.EventHandler(this.TsmiKaydet_Click);
             // 
@@ -119,7 +121,7 @@
             this.tsmCikis.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuItem;
             this.tsmCikis.Image = global::IptvEditorUI.Properties.Resources.Communicator_Mac_icon;
             this.tsmCikis.Name = "tsmCikis";
-            this.tsmCikis.Size = new System.Drawing.Size(252, 30);
+            this.tsmCikis.Size = new System.Drawing.Size(325, 30);
             this.tsmCikis.Text = "Çıkış";
             this.tsmCikis.Click += new System.EventHandler(this.TsmCikis_Click);
             // 
@@ -157,7 +159,7 @@
             this.tsmGuncelle.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuItem;
             this.tsmGuncelle.Image = global::IptvEditorUI.Properties.Resources.Internet_Download_Manager_icon;
             this.tsmGuncelle.Name = "tsmGuncelle";
-            this.tsmGuncelle.Size = new System.Drawing.Size(252, 30);
+            this.tsmGuncelle.Size = new System.Drawing.Size(182, 30);
             this.tsmGuncelle.Text = "Guncelle";
             this.tsmGuncelle.Click += new System.EventHandler(this.TsmGuncelle_Click);
             // 
@@ -168,7 +170,7 @@
             this.tsmBilgi.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuItem;
             this.tsmBilgi.Image = global::IptvEditorUI.Properties.Resources.Autodesk_Building_Design_Suite_icon;
             this.tsmBilgi.Name = "tsmBilgi";
-            this.tsmBilgi.Size = new System.Drawing.Size(252, 30);
+            this.tsmBilgi.Size = new System.Drawing.Size(182, 30);
             this.tsmBilgi.Text = "Bilgi";
             this.tsmBilgi.Click += new System.EventHandler(this.TsmBilgi_Click);
             // 
@@ -279,6 +281,17 @@
             this.toolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip.ToolTipTitle = "Bilgi";
             // 
+            // tsmiAramaSonuclariniKaydet
+            // 
+            this.tsmiAramaSonuclariniKaydet.AccessibleDescription = "Düzenlenen IPTV listesini kaydeder";
+            this.tsmiAramaSonuclariniKaydet.AccessibleName = "Kaydet";
+            this.tsmiAramaSonuclariniKaydet.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuItem;
+            this.tsmiAramaSonuclariniKaydet.Image = global::IptvEditorUI.Properties.Resources.Shortcuts_Folder_icon;
+            this.tsmiAramaSonuclariniKaydet.Name = "tsmiAramaSonuclariniKaydet";
+            this.tsmiAramaSonuclariniKaydet.Size = new System.Drawing.Size(325, 30);
+            this.tsmiAramaSonuclariniKaydet.Text = "Arama Sonuçlarını Kaydet";
+            this.tsmiAramaSonuclariniKaydet.Click += new System.EventHandler(this.TsmiAramSonuclariniKaydet_Click);
+            // 
             // FrmIpTvEditor
             // 
             this.AccessibleDescription = "Ana Ekran";
@@ -332,6 +345,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmGuncelle;
         private System.Windows.Forms.ToolStripMenuItem tsmBilgi;
         private System.Windows.Forms.ToolStripMenuItem cmsIzle;
+        private System.Windows.Forms.ToolStripMenuItem tsmiAramaSonuclariniKaydet;
     }
 }
 
