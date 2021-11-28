@@ -9,7 +9,7 @@ IPTV kanalları açma, izleme ve silme özelliklerine sahip, performanslı bir I
 - M3U uzantısına sahip dosyalardaki IPTV kanal ve videolarını yükleme ve silme***,
 - İstenen kanalları (ad ve gruba göre) arama ve bulma,
 - Silme sonrası oluşturulan kanal listesini kaydetme,
-- Gruba göre yapılan arama sonuçlarını kaydetme,
 - (Eğer sisteminizde yüklüyse) İstenen kanalı VLC Player'la açma,
 - Hi-DPI ekranları destekleme,
 - (İstek) Görme engelli kullanıcılar için erişilebilirlik seçenekleri,
+- (İstek) Gruba göre yapılan arama sonuçlarını kaydetme,
