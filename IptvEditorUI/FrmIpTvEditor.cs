@@ -59,9 +59,8 @@ namespace IptvEditorUI
             if (listView.SelectedItems.Count <= 0)
                 return;
 
-            string link = listView.SelectedItems[0].SubItems[3].Text.Trim();
             Izle izle = new Izle();
-            izle.Oynat(link);
+            izle.Oynat(listView.SelectedItems[0].SubItems[3].Text.Trim());
         }
 
         private void TstBul_TextChanged(object sender, EventArgs e)
@@ -105,6 +104,14 @@ namespace IptvEditorUI
         private void CmsIzle_Click(object sender, EventArgs e)
         {
             ListView_DoubleClick(sender, e);
+        }
+
+        private void CmsKopyala_Click(object sender, EventArgs e)
+        {
+            if (listView.SelectedItems.Count <= 0)
+                return;
+
+            Clipboard.SetText(listView.SelectedItems[0].SubItems[3].Text.Trim());
         }
 
         private void CmsSil_Click(object sender, EventArgs e)

@@ -26,7 +26,7 @@
     <ProductName>IPTV Editor</ProductName>
     <PublisherName>Umut D.</PublisherName>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.6.%2a</ApplicationVersion>
+    <ApplicationVersion>1.0.7.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -126,6 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="iptv.ico" />
+    <None Include="Resources\folder-yellow-copy-cloud-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IptvEditorLibrary\IptvEditorLibrary.csproj">

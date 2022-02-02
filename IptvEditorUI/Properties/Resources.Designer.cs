@@ -93,6 +93,16 @@ namespace IptvEditorUI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap folder_yellow_copy_cloud_icon {
+            get {
+                object obj = ResourceManager.GetObject("folder-yellow-copy-cloud-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Internet_Download_Manager_icon {
             get {
                 object obj = ResourceManager.GetObject("Internet-Download-Manager-icon", resourceCulture);
