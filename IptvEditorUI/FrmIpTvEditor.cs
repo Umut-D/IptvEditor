@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Threading.Tasks;
+using System.Linq;
 using IptvEditorLibrary;
 
 namespace IptvEditorUI
@@ -10,6 +12,7 @@ namespace IptvEditorUI
         private Dosya _dosya;
         private Aktar _aktar;
         private Ara _ara;
+        private bool _silmeIslemiDevamEdiyor = false;
 
         public FrmIpTvEditor()
         {
@@ -114,22 +117,91 @@ namespace IptvEditorUI
             Clipboard.SetText(listView.SelectedItems[0].SubItems[3].Text.Trim());
         }
 
-        private void CmsSil_Click(object sender, EventArgs e)
+        private async void CmsSil_Click(object sender, EventArgs e)
         {
-            if (listView.SelectedItems.Count <= 0)
+            if (listView.SelectedItems.Count <= 0 || _silmeIslemiDevamEdiyor)
                 return;
 
             int secilenNesneIndeksi = listView.SelectedItems[0].Index - 1;
 
-            KanalSil();
-
-            ListViewYukle(_aktar.Kanallar);
+            await KanalSilAsync();
 
             SilmeSonrasiKalinanSatiriSec(secilenNesneIndeksi);
-
-            KanalSayisi();
         }
 
+        // İlerleme göstergesi ile çok hızlı async metod
+        private async Task KanalSilAsync()
+        {
+            if (_silmeIslemiDevamEdiyor) return;
+
+            _silmeIslemiDevamEdiyor = true;
+            
+            try
+            {
+                // Kullanıcıya işlem başladığını göster
+                tsslDurum.Text = "Kanallar hazırlanıyor...";
+                Cursor = Cursors.WaitCursor;
+                
+                // Seçili kanalların adlarını topla (UI thread'de)
+                var silinecekKanalAdlari = new List<string>();
+                foreach (ListViewItem item in listView.SelectedItems)
+                {
+                    string kanalAdi = item.SubItems[1].Text.Trim();
+                    if (!string.IsNullOrEmpty(kanalAdi))
+                        silinecekKanalAdlari.Add(kanalAdi);
+                }
+
+                if (silinecekKanalAdlari.Count == 0) return;
+
+                // Silme işlemini arka planda yap
+                await Task.Run(() =>
+                {
+                    _ara = new Ara(_aktar);
+                    
+                    // Silinecek kanalları Kanal nesnesine çevir
+                    var silinecekKanallar = silinecekKanalAdlari
+                        .Select(ad => new Kanal { Ad = ad })
+                        .ToList();
+                    
+                    // İlerleme callback'i ile toplu silme işlemi
+                    _ara.KanalSil(silinecekKanallar, (islenen, toplam) =>
+                    {
+                        // UI thread'de ilerleme göster
+                        this.Invoke((MethodInvoker)delegate
+                        {
+                            double yuzde = toplam > 0 ? (double)islenen / toplam * 100 : 0;
+                            tsslDurum.Text = $"Kanallar siliniyor... {islenen}/{toplam} (%{yuzde:F0})";
+                        });
+                    });
+                });
+
+                // UI'yi güncelle (UI thread'de)
+                tsslDurum.Text = "Liste güncelleniyor...";
+                ListViewYukle(_aktar.Kanallar);
+                KanalSayisi();
+                
+                // İşlem başarılı mesajı
+                tsslDurum.Text = $"✅ {silinecekKanalAdlari.Count} kanal başarıyla silindi";
+                
+                // 3 saniye sonra normal duruma dön
+                await Task.Delay(3000);
+                if (!_silmeIslemiDevamEdiyor) // Başka işlem başlamamışsa
+                    KanalSayisi();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Silme işlemi sırasında hata: {ex.Message}", "Hata", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tsslDurum.Text = "❌ Silme işlemi başarısız";
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+                _silmeIslemiDevamEdiyor = false;
+            }
+        }
+
+        // Eski yavaş KanalSil metodu - artık kullanılmıyor
         private void KanalSil()
         {
             _ara = new Ara(_aktar);
@@ -141,7 +213,7 @@ namespace IptvEditorUI
 
                 int indeks = listView.SelectedItems[i].Index;
                 string seciliKanal = listView.Items[indeks].SubItems[1].Text.Trim();
-                _ara.KanailSil(new Kanal
+                _ara.KanalSil(new Kanal
                 {
                     Ad = seciliKanal
                 });
@@ -150,7 +222,7 @@ namespace IptvEditorUI
 
         private void SilmeSonrasiKalinanSatiriSec(int secilenNesneIndeksi)
         {
-            if (secilenNesneIndeksi <= 0)
+            if (secilenNesneIndeksi <= 0 || secilenNesneIndeksi >= listView.Items.Count)
                 return;
 
             listView.Items[secilenNesneIndeksi].Focused = true;

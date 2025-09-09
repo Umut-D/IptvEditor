@@ -1,0 +1,6 @@
+D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorLibrary\bin\Release\IptvEditorLibrary.dll
+D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorLibrary\bin\Release\IptvEditorLibrary.pdb
+D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorLibrary\obj\Release\IptvEditorLibrary.csproj.AssemblyReference.cache
+D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorLibrary\obj\Release\IptvEditorLibrary.csproj.CoreCompileInputs.cache
+D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorLibrary\obj\Release\IptvEditorLibrary.dll
+D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorLibrary\obj\Release\IptvEditorLibrary.pdb

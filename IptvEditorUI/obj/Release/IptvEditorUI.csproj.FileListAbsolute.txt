@@ -1,0 +1,14 @@
+D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorUI\bin\Release\IPTV Editör.exe.config
+D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorUI\bin\Release\IPTV Editör.exe
+D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorUI\bin\Release\IPTV Editör.pdb
+D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorUI\bin\Release\IptvEditorLibrary.dll
+D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorUI\bin\Release\IptvEditorLibrary.pdb
+D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorUI\obj\Release\IptvEditorUI.csproj.AssemblyReference.cache
+D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorUI\obj\Release\IptvEditorUI.FrmIpTvEditor.resources
+D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorUI\obj\Release\IptvEditorUI.Properties.Resources.resources
+D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorUI\obj\Release\IptvEditorUI.csproj.GenerateResource.cache
+D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorUI\obj\Release\IptvEditorUI.csproj.CoreCompileInputs.cache
+D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorUI\obj\Release\IptvEdit.B1390A45.Up2Date
+D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorUI\obj\Release\IPTV Editör.exe
+D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorUI\obj\Release\IPTV Editör.pdb
+D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorUI\obj\Release\IPTV Editör.exe.config

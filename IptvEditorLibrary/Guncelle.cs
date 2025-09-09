@@ -41,7 +41,7 @@ namespace IptvEditorLibrary
         {
             string sunucudakiVersiyon = xmlOku.GetAttribute("version");
 
-            if (sunucudakiVersiyon == "1.07")
+            if (sunucudakiVersiyon == "1.08")
                 MessageBox.Show(@"Program günceldir. Yeni versiyon çıkana kadar şimdilik en iyisi bu.", @"Güncelle", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
