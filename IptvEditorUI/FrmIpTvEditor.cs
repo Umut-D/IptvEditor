@@ -13,10 +13,15 @@ namespace IptvEditorUI
         private Aktar _aktar;
         private Ara _ara;
         private bool _silmeIslemiDevamEdiyor = false;
+        private int _siralamaKolonu = -1;
+        private SortOrder _siralamaDurumu = SortOrder.None;
 
         public FrmIpTvEditor()
         {
             InitializeComponent();
+
+            // ListView sıralama için ColumnClick event'ini bağla
+            listView.ColumnClick += ListView_ColumnClick;
         }
 
         private void TsmiAc_Click(object sender, EventArgs e)
@@ -70,6 +75,10 @@ namespace IptvEditorUI
         {
             if (_aktar == null)
                 return;
+
+            // Sıralama state'ini sıfırla
+            _siralamaKolonu = -1;
+            _siralamaDurumu = SortOrder.None;
 
             ListViewYukle(KanalBul());
 
@@ -135,13 +144,13 @@ namespace IptvEditorUI
             if (_silmeIslemiDevamEdiyor) return;
 
             _silmeIslemiDevamEdiyor = true;
-            
+
             try
             {
                 // Kullanıcıya işlem başladığını göster
                 tsslDurum.Text = "Kanallar hazırlanıyor...";
                 Cursor = Cursors.WaitCursor;
-                
+
                 // Seçili kanalların adlarını topla (UI thread'de)
                 var silinecekKanalAdlari = new List<string>();
                 foreach (ListViewItem item in listView.SelectedItems)
@@ -157,12 +166,12 @@ namespace IptvEditorUI
                 await Task.Run(() =>
                 {
                     _ara = new Ara(_aktar);
-                    
+
                     // Silinecek kanalları Kanal nesnesine çevir
                     var silinecekKanallar = silinecekKanalAdlari
                         .Select(ad => new Kanal { Ad = ad })
                         .ToList();
-                    
+
                     // İlerleme callback'i ile toplu silme işlemi
                     _ara.KanalSil(silinecekKanallar, (islenen, toplam) =>
                     {
@@ -179,10 +188,10 @@ namespace IptvEditorUI
                 tsslDurum.Text = "Liste güncelleniyor...";
                 ListViewYukle(_aktar.Kanallar);
                 KanalSayisi();
-                
+
                 // İşlem başarılı mesajı
                 tsslDurum.Text = $"✅ {silinecekKanalAdlari.Count} kanal başarıyla silindi";
-                
+
                 // 3 saniye sonra normal duruma dön
                 await Task.Delay(3000);
                 if (!_silmeIslemiDevamEdiyor) // Başka işlem başlamamışsa
@@ -190,7 +199,7 @@ namespace IptvEditorUI
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Silme işlemi sırasında hata: {ex.Message}", "Hata", 
+                MessageBox.Show($"Silme işlemi sırasında hata: {ex.Message}", "Hata",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tsslDurum.Text = "❌ Silme işlemi başarısız";
             }
@@ -262,6 +271,67 @@ namespace IptvEditorUI
         private void TsmCikis_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void ListView_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            // Aynı kolona tıklanırsa sıralama yönünü değiştir
+            if (e.Column == _siralamaKolonu)
+            {
+                _siralamaDurumu = _siralamaDurumu == SortOrder.Ascending
+                    ? SortOrder.Descending
+                    : SortOrder.Ascending;
+            }
+            else
+            {
+                _siralamaKolonu = e.Column;
+                _siralamaDurumu = SortOrder.Ascending;
+            }
+
+            // Mevcut ListView öğelerini sırala
+            SiralamaYap();
+        }
+
+        private void SiralamaYap()
+        {
+            if (_siralamaKolonu < 0 || listView.Items.Count == 0)
+                return;
+
+            var items = listView.Items.Cast<ListViewItem>().ToList();
+
+            // Sıralama yap
+            items.Sort((x, y) =>
+            {
+                string xText = x.SubItems[_siralamaKolonu].Text;
+                string yText = y.SubItems[_siralamaKolonu].Text;
+
+                int sonuc;
+                // Sıra numarası kolonunu sayısal olarak sırala
+                if (_siralamaKolonu == 0)
+                {
+                    int xNum = int.TryParse(xText, out int xVal) ? xVal : 0;
+                    int yNum = int.TryParse(yText, out int yVal) ? yVal : 0;
+                    sonuc = xNum.CompareTo(yNum);
+                }
+                else
+                {
+                    sonuc = string.Compare(xText, yText, StringComparison.OrdinalIgnoreCase);
+                }
+
+                return _siralamaDurumu == SortOrder.Ascending ? sonuc : -sonuc;
+            });
+
+            // ListView'i güncelle
+            listView.BeginUpdate();
+            listView.Items.Clear();
+
+            // Sıralı öğeleri ekle
+            foreach (var item in items)
+            {
+                listView.Items.Add(item);
+            }
+
+            listView.EndUpdate();
         }
     }
 }

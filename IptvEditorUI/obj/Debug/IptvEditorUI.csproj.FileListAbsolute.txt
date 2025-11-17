@@ -12,3 +12,29 @@ D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorUI\obj\Debug\IptvEdit.B1390A4
 D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorUI\obj\Debug\IPTV Editör.exe
 D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorUI\obj\Debug\IPTV Editör.pdb
 D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorUI\obj\Debug\IPTV Editör.exe.config
+C:\Users\Zeta\Desktop\IptvEditor\IptvEditorUI\bin\Debug\IPTV Editör.exe.config
+C:\Users\Zeta\Desktop\IptvEditor\IptvEditorUI\bin\Debug\IPTV Editör.exe
+C:\Users\Zeta\Desktop\IptvEditor\IptvEditorUI\bin\Debug\IPTV Editör.pdb
+C:\Users\Zeta\Desktop\IptvEditor\IptvEditorUI\bin\Debug\IptvEditorLibrary.dll
+C:\Users\Zeta\Desktop\IptvEditor\IptvEditorUI\bin\Debug\IptvEditorLibrary.pdb
+C:\Users\Zeta\Desktop\IptvEditor\IptvEditorUI\obj\Debug\IptvEditorUI.csproj.AssemblyReference.cache
+C:\Users\Zeta\Desktop\IptvEditor\IptvEditorUI\obj\Debug\IptvEditorUI.FrmIpTvEditor.resources
+C:\Users\Zeta\Desktop\IptvEditor\IptvEditorUI\obj\Debug\IptvEditorUI.Properties.Resources.resources
+C:\Users\Zeta\Desktop\IptvEditor\IptvEditorUI\obj\Debug\IptvEditorUI.csproj.GenerateResource.cache
+C:\Users\Zeta\Desktop\IptvEditor\IptvEditorUI\obj\Debug\IptvEditorUI.csproj.CoreCompileInputs.cache
+C:\Users\Zeta\Desktop\IptvEditor\IptvEditorUI\obj\Debug\IptvEdit.B1390A45.Up2Date
+C:\Users\Zeta\Desktop\IptvEditor\IptvEditorUI\obj\Debug\IPTV Editör.exe
+C:\Users\Zeta\Desktop\IptvEditor\IptvEditorUI\obj\Debug\IPTV Editör.pdb
+C:\Users\Zeta\source\repos\Umut-D\IptvEditor\IptvEditorUI\bin\Debug\IPTV Editör.exe.config
+C:\Users\Zeta\source\repos\Umut-D\IptvEditor\IptvEditorUI\bin\Debug\IPTV Editör.exe
+C:\Users\Zeta\source\repos\Umut-D\IptvEditor\IptvEditorUI\bin\Debug\IPTV Editör.pdb
+C:\Users\Zeta\source\repos\Umut-D\IptvEditor\IptvEditorUI\bin\Debug\IptvEditorLibrary.dll
+C:\Users\Zeta\source\repos\Umut-D\IptvEditor\IptvEditorUI\bin\Debug\IptvEditorLibrary.pdb
+C:\Users\Zeta\source\repos\Umut-D\IptvEditor\IptvEditorUI\obj\Debug\IptvEditorUI.csproj.AssemblyReference.cache
+C:\Users\Zeta\source\repos\Umut-D\IptvEditor\IptvEditorUI\obj\Debug\IptvEditorUI.FrmIpTvEditor.resources
+C:\Users\Zeta\source\repos\Umut-D\IptvEditor\IptvEditorUI\obj\Debug\IptvEditorUI.Properties.Resources.resources
+C:\Users\Zeta\source\repos\Umut-D\IptvEditor\IptvEditorUI\obj\Debug\IptvEditorUI.csproj.GenerateResource.cache
+C:\Users\Zeta\source\repos\Umut-D\IptvEditor\IptvEditorUI\obj\Debug\IptvEditorUI.csproj.CoreCompileInputs.cache
+C:\Users\Zeta\source\repos\Umut-D\IptvEditor\IptvEditorUI\obj\Debug\IptvEdit.B1390A45.Up2Date
+C:\Users\Zeta\source\repos\Umut-D\IptvEditor\IptvEditorUI\obj\Debug\IPTV Editör.exe
+C:\Users\Zeta\source\repos\Umut-D\IptvEditor\IptvEditorUI\obj\Debug\IPTV Editör.pdb

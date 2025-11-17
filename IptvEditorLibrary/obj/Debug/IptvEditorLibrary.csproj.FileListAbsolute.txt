@@ -4,3 +4,15 @@ D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorLibrary\obj\Debug\IptvEditorL
 D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorLibrary\obj\Debug\IptvEditorLibrary.csproj.CoreCompileInputs.cache
 D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorLibrary\obj\Debug\IptvEditorLibrary.dll
 D:\Belgelerim\Programlarim\C#\IptvEditor\IptvEditorLibrary\obj\Debug\IptvEditorLibrary.pdb
+C:\Users\Zeta\Desktop\IptvEditor\IptvEditorLibrary\bin\Debug\IptvEditorLibrary.dll
+C:\Users\Zeta\Desktop\IptvEditor\IptvEditorLibrary\bin\Debug\IptvEditorLibrary.pdb
+C:\Users\Zeta\Desktop\IptvEditor\IptvEditorLibrary\obj\Debug\IptvEditorLibrary.csproj.AssemblyReference.cache
+C:\Users\Zeta\Desktop\IptvEditor\IptvEditorLibrary\obj\Debug\IptvEditorLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Zeta\Desktop\IptvEditor\IptvEditorLibrary\obj\Debug\IptvEditorLibrary.dll
+C:\Users\Zeta\Desktop\IptvEditor\IptvEditorLibrary\obj\Debug\IptvEditorLibrary.pdb
+C:\Users\Zeta\source\repos\Umut-D\IptvEditor\IptvEditorLibrary\bin\Debug\IptvEditorLibrary.dll
+C:\Users\Zeta\source\repos\Umut-D\IptvEditor\IptvEditorLibrary\bin\Debug\IptvEditorLibrary.pdb
+C:\Users\Zeta\source\repos\Umut-D\IptvEditor\IptvEditorLibrary\obj\Debug\IptvEditorLibrary.csproj.AssemblyReference.cache
+C:\Users\Zeta\source\repos\Umut-D\IptvEditor\IptvEditorLibrary\obj\Debug\IptvEditorLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Zeta\source\repos\Umut-D\IptvEditor\IptvEditorLibrary\obj\Debug\IptvEditorLibrary.dll
+C:\Users\Zeta\source\repos\Umut-D\IptvEditor\IptvEditorLibrary\obj\Debug\IptvEditorLibrary.pdb
